@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package com.tangjian.grpc.rpc;
+
+option java_multiple_files = true;
+option java_package = "com.tangjian.grpc.rpc.service";
+option java_outer_classname = "CenterNodeServer";
+
+import "CenterNodeRpcModel.proto";
+
+service CenterNodeService {
+    rpc register(RegisterRequest) returns (RegisterResponse);
+	rpc heartbeat(HeartbeatRequest) returns (HeartbeatResponse);
+}  

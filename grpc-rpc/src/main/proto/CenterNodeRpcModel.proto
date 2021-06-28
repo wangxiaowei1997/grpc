@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.tangjian.grpc.rpc;
+
+option java_multiple_files = true;
+//java包名
+option java_package = "com.tangjian.grpc.rpc.model";
+//最外层java类名
+option java_outer_classname = "CenterNodeRpcModel";
+
+message RegisterRequest{
+    string ip  = 1;
+    string hostname  = 2;
+}  
+message RegisterResponse{
+    int32 status  = 1;
+}
+message HeartbeatRequest{
+    string ip  = 1;
+    string hostname  = 2;
+}  
+message HeartbeatResponse{
+    int32 status  = 1;
+}
