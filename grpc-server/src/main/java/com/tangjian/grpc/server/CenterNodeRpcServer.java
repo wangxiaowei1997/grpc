@@ -62,4 +62,12 @@ public class CenterNodeRpcServer {
         }
     }
 
+
+    public static void main(String[] args) throws Exception {
+        log.info("服务器启动......");
+        CenterNodeRpcServer centerServer = new CenterNodeRpcServer();
+        centerServer.start();
+        centerServer.blockUntilShutdown();
+    }
+
 }
